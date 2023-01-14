@@ -1,6 +1,7 @@
 // Plugins
 import vue from '@vitejs/plugin-vue'
 import vuetify from 'vite-plugin-vuetify'
+import ssr from 'vite-plugin-ssr/plugin'
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -14,6 +15,7 @@ export default defineConfig({
     vuetify({
       autoImport: true,
     }),
+    ssr()
   ],
   define: { 'process.env': {} },
   resolve: {
